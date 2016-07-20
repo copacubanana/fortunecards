@@ -1,0 +1,146 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Georgia, Times, Times New Roman, serif;
+}
+
+.row {
+	border: .1em solid LightGray;
+}
+
+ .row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* ----------------------- Headings ----------------------------- */
+
+
+h1, h2, h3, h4 {
+    color: DarkRed;
+    margin: .3em auto;
+    text-align: center;
+    font-family: cursive;
+}
+
+h1 {
+	font-size: 3em;
+	text-shadow: 2px 2px 2px navy;
+}
+
+h3 {
+	font-size: 1.5em;
+	padding: .5em auto;
+	height: 1.7em;
+}
+
+.label {
+    color: DarkRed;
+    font-weight: bold;
+    margin: .5em auto;
+
+    border: .1em solid purple;
+}
+
+
+
+/* ----------------------- Layout ----------------------------- */
+
+div.head {
+	width: 100%;
+	height: 15em;
+	background: #fff url('images/fortuneteller.jpg') no-repeat 0px 0px;
+	background-size: contain;
+}
+
+#cardscontainer {
+	width: 62%;
+	display: block;
+	float: left;
+}
+
+div.content {
+	max-width: 60em;
+	margin: 0 auto;
+}
+
+div.footer {
+	display: block;
+	float: left;
+	height: 7em;
+	width: 100%;
+	text-align: center;
+	padding: 2em;
+
+}
+
+/* ----------------------- Cards Explanation----------------------------- */
+
+#cardsexplanation {
+	display: block;
+	float: right;
+	width: 38%;
+}
+
+#cardsexplanation p {
+	padding: .8em 1em;
+}
+
+.rowExplain {
+	margin: 0 1em;
+	border: .1em solid LightGray;
+	border-bottom: none;
+}
+
+.rowExplain:last-child {
+	border-bottom: .1em solid LightGray;	
+}
+
+
+/* ----------------------- Cards ----------------------------- */
+
+.draw, .drawn { /* before click, post click */
+    border: .25em double LightGray;
+	background-size: cover;
+    border-radius: 1em;
+    width: 8em;
+    height: 12em;
+    display: block;
+    float: left;
+    position: relative;
+    margin: 1em 2em;
+}
+
+.draw {
+	background: darkred; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, darkred, midnightblue); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, darkred, midnightblue); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, darkred, midnightblue); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, darkred, midnightblue); /* Standard syntax */
+}
+
+.draw:hover {
+	background: darkred; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, midnightblue, darkred); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, midnightblue, darkred); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, midnightblue, darkred); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, midnightblue, darkred); /* Standard syntax */
+    box-shadow: 1em 1em 1em gray;
+    cursor: pointer;
+}
+
+.cardnumber {
+   width: .9em;
+   height: .9em;
+   font-size: 2.75em;
+   background-size: contain;
+   position: absolute;
+   top: .1em;
+   right: .15em;
+   display: block;
+   float: left;
+   visibility: hidden;
+}
+
